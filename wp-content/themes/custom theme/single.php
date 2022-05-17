@@ -1,0 +1,68 @@
+<?php get_header();?>
+
+
+<?php
+
+while(have_posts()){
+    the_post();?>
+<div class="events container">
+    <div class="events__body">
+        <div class="events__item">
+            <div class="events__title">
+                <?php the_title(); ?>
+            </div>
+            <div class="row">
+                <div class="row__item">
+                    <div class="events__photo">
+                        <?php the_post_thumbnail(); ?>
+                    </div>
+                </div>
+                <div class="row__item">
+                    <div class="events__text">
+                        <?php the_content(); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="events__date">
+                <span class="events__date-text">Date of Event:</span>
+                <?php echo get_post_meta($post -> ID, '_event_date', true); ?>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="commentlist">
+
+        <?php
+$args = array(
+);
+?><p class="like__text">Tap this, if you like this post</p>
+
+        <p class="liked__text hide">you liked this post</p>
+        <?php      comment_form( $args );
+        ?>
+        <?php
+        $comments = get_comments(array(
+        'post_id' => get_the_ID(),
+        'status' => 'approve',
+
+        ));
+        
+        wp_list_comments(array(
+        'per_page' => -1,
+        'reverse_top_level' => false,
+        ), $comments);
+
+        ?>
+    </div>
+
+</div>
+
+<?php
+                    
+}
+wp_reset_postdata();
+?>
+
+
+<?php get_footer(); ?>

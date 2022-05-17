@@ -1,0 +1,261 @@
+/*
+Theme Name: Custom Theme
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada:wght@400;700&display=swap");
+
+body {
+    background-color: #032435;
+    font-family: "Radio Canada";
+}
+footer {
+    padding: 50px;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
+    padding: 0 10px;
+}
+.header__title {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 50px;
+    padding: 10px 0;
+}
+.events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.events__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+.events__body {
+    padding: 20px;
+}
+.events__title {
+    font-size: 35px;
+    font-weight: 700;
+    color: #ff9a01;
+}
+.read__more-link,
+.events__title-link:hover {
+    color: rgb(252, 174, 57);
+}
+.read__more-link,
+.events__title-link {
+    color: rgb(255, 154, 1);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.events__date-text {
+    color: rgb(255, 154, 1);
+    font-size: 18px;
+    padding-top: 10px;
+}
+.events_excerpt,
+.events__text {
+    line-height: 1.5em;
+    margin: 30px 0;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row__item {
+    width: 50%;
+}
+
+.paginate__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page-numbers {
+    padding: 10px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.logged-in-as {
+    display: none;
+}
+#comments {
+    color: #fff;
+    font-size: 30px;
+}
+
+.current {
+    font-weight: 700;
+}
+.comment-respond {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.comment-form-comment {
+    display: flex;
+    flex-direction: column;
+}
+.comment-form-comment textarea {
+    width: 730px;
+    height: 200px;
+}
+.comment-reply-title a {
+    text-decoration: none;
+    color: red;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+#cancel-comment-reply-link {
+    display: none;
+}
+.comment::marker {
+    display: none !important;
+}
+
+.comment-form-comment label {
+    display: none;
+}
+.form-submit {
+    display: flex;
+    justify-content: center;
+}
+.required {
+    color: red;
+}
+.submit {
+    padding: 10px;
+    background-color: #ff9a01;
+    border: none;
+    border-radius: 5%;
+    color: #fff;
+    cursor: pointer;
+}
+.commentlist {
+    padding: 30px;
+    width: 1140px;
+    background-color: #fff;
+}
+.commentmetadata a {
+    color: #ff9a01;
+}
+ul {
+    list-style: none;
+}
+.children {
+    padding: 10px;
+    margin: -10px 0 0 10px;
+}
+.comment-reply-link {
+    padding: 5px;
+    background-color: #ff9a01;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.fn,
+.fn a {
+    color: #ff0000;
+    text-decoration: underline;
+}
+.reply-title a {
+    color: #ff0000;
+}
+.comment-respond {
+    background-color: #fff;
+    padding: 40px 0;
+}
+.comment-body {
+    background-color: whitesmoke;
+    border: 1px #919da8 solid;
+    padding: 10px;
+    margin: 5px;
+}
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+li {
+    list-style: none;
+}
+.comment-form-author input,
+.comment-form-email input,
+.comment-form-url input {
+    height: 30px;
+    width: 100%;
+    border: 1px brown solid;
+    padding-left: 10px;
+}
+#comment {
+    width: 1140px;
+    padding: 10px;
+    border: 1px brown solid;
+}
+.comment-form {
+    background-color: whitesmoke;
+    border: 1px #919da8 solid;
+    padding: 10px;
+}
+.like__input {
+    display: none;
+}
+
+.like__label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    position: relative;
+}
+
+.like__label::before {
+    content: "Top this if you are liked this post";
+    background-color: rgb(255, 22, 22);
+    color: #fff;
+    border-radius: 4px;
+    height: 24px;
+    margin-right: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+.like__label::after {
+    transition: all 0.5s ease 0s;
+    transform: scale(0);
+    padding: 5px;
+    border-radius: 4px;
+    background-color: rgb(255, 103, 103);
+    content: "You are liked this post";
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+.wp-calendar-table {
+    background-color: #fff;
+    width: 1140px;
+    padding: 10px;
+}
+
+td {
+    border: 1px solid black;
+}
+td > a {
+    color: #032435;
+    font-weight: 700;
+}
