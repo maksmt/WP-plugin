@@ -26,6 +26,7 @@ while(have_posts()){
             <div class="events__date">
                 <span class="events__date-text">Date of Event:</span>
                 <?php echo get_post_meta($post -> ID, '_event_date', true); ?>
+                <span class="entry-date"><?php echo get_the_date('Ymd'); ?></span>
             </div>
         </div>
     </div>

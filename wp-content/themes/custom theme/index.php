@@ -33,19 +33,20 @@ while($old_events->have_posts()){
             </div>
         </div>
     </div>
+
     <a href="<?php echo site_url('/old_events') ?>" class="">Old Events</a>
 </div>
 <div class="calendar container">
 
-    <!-- <?php
-    the_widget( 'WP_Widget_Calendar' );}
-    ?> -->
+    <?php
+    echo get_calendar();
+    ?>
 
 </div>
 
 <?php
+}
 wp_reset_postdata();
-echo get_calendar();
 ?>
 
 

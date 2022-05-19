@@ -11,7 +11,7 @@
 while($old_events->have_posts()){
         $old_events->the_post();?>
 <div class="events container">
-    <div class="events__body">
+    <div class="events__body " id="ajax-posts">
         <div class="events__item">
             <div class="events__title">
                 <a class="events__title-link" href="<?php the_permalink(); ?>">
@@ -50,14 +50,24 @@ while($old_events->have_posts()){
 <div class="loadmore container">
 
     <?php
-global $wp_query; 
-if (  $wp_query->max_num_pages > 1 )
-echo '<button id="more_posts">Load More</button>'; 
+global $wp_query;
+ 
+// текущая страница
+$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+// максимум страниц
+$max_pages = $wp_query->max_num_pages;
+ 
+// если текущая страница меньше, чем максимум страниц, то выводим кнопку
+if( $paged < $max_pages ) {
+	echo '<div id="loadmore" style="text-align:center;">
+		<a href="" data-max_pages="' . $max_pages . '" data-paged="' . $paged . '" class="button">Загрузить ещё</a>
+	</div>';
+}
 ?>
 </div>
 <?php
-                    
 }
+
 wp_reset_postdata();
 ?>
 
