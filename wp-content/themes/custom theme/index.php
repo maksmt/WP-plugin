@@ -34,8 +34,13 @@ while($old_events->have_posts()){
         </div>
     </div>
 
-    <a href="<?php echo site_url('/old_events') ?>" class="">Old Events</a>
+    <a href="<?php echo site_url('/old_events') ?>" class="archive-button">Old Events</a>
 </div>
+
+<?php
+}
+wp_reset_postdata();
+?>
 <div class="calendar container">
 
     <?php
@@ -43,11 +48,6 @@ while($old_events->have_posts()){
     ?>
 
 </div>
-
-<?php
-}
-wp_reset_postdata();
-?>
 
 
 <?php get_footer(); ?>

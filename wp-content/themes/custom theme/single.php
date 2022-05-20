@@ -37,12 +37,8 @@ while(have_posts()){
         <?php
 $args = array(
 );
-?><p class="like__text">Tap this, if you like this post</p>
-
-        <p class="liked__text hide">you liked this post</p>
+?>
         <?php      comment_form( $args );
-        ?>
-        <?php
         $comments = get_comments(array(
         'post_id' => get_the_ID(),
         'status' => 'approve',
@@ -66,4 +62,6 @@ wp_reset_postdata();
 ?>
 
 
-<?php get_footer(); ?>
+<?php get_footer();  
+
+?>

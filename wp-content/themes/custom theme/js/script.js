@@ -11,6 +11,8 @@
 
 // }
 
+
+
 jQuery(function ($) {
 
     // определяем в переменные кнопку, текущую страницу и максимальное кол-во страниц
@@ -25,7 +27,7 @@ jQuery(function ($) {
         var request = new XMLHttpRequest();
         $.ajax({
             beforeSend: function (request) {
-                button.text('Загружаем...');
+                button.text('Loading...');
                 request.setRequestHeader('X-WP-Nonce', more.nonce);
             },
             type: 'POST',
@@ -39,8 +41,7 @@ jQuery(function ($) {
 
                 paged++; // инкремент номера страницы
                 button.parent().before(data);
-                button.text('Загрузить ещё');
-
+                button.text('Load more');
                 // если последняя страница, то удаляем кнопку
                 if (paged == maxPages) {
                     button.remove();
