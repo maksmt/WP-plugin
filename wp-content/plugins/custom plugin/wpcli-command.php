@@ -10,21 +10,6 @@ class deleteCommand{
     ]);
     global $newimportance;
     for ($i = 0; $i < $importance; $i++) { $importance_ids=array_map(function($importance){ return $importance->term_id;
-        if ($term_id = 3){
-        $importance =1;
-        }
-        // if ($term_id = 4){
-        // $importance =2;
-        // }
-        // if ($term_id = 5){
-        // $importance =3;
-        // }
-        // if ($term_id = 6){
-        // $importance =4;
-        // }
-        // if ($term_id = 7){
-        // $importance =5;
-        // }
         }, $importance_terms);
         $allposts= get_posts( array('post_type'=>'old_events', 'importance'=>$importance) );
         foreach ($allposts as $eachpost) {
