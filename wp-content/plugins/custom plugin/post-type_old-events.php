@@ -15,9 +15,6 @@ function pluginPostType(){
             'all_items' => 'All Old Events',
             'singular_name' => 'Old Events',
         ),
-        
-        
-        
         'menu_icon' => 'dashicons-clipboard',
     ));
 };

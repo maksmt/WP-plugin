@@ -12,12 +12,12 @@ if(is_singular('old_events') ){
 <ul class="likes">
     <li class="likes__item likes__item--like">
         <a href="<?php echo add_query_arg('post_action', 'like'); ?>">
-            Like (<?php echo ip_get_like_count('likes') ?>)
+            Like Event(<?php echo ip_get_like_count('likes') ?>)
         </a>
     </li>
     <li class="likes__item likes__item--dislike">
         <a href="<?php echo add_query_arg('post_action', 'dislike'); ?>">
-            Dislike (<?php echo ip_get_like_count('dislikes') ?>)
+            Dislike Event(<?php echo ip_get_like_count('dislikes') ?>)
         </a>
     </li>
 </ul>
