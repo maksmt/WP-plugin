@@ -1983,7 +1983,7 @@ function wp_get_archives( $args = '' ) {
 		'show_post_count' => false,
 		'echo'            => 1,
 		'order'           => 'DESC',
-		'post_type'       => 'post',
+		'post_type'       => 'old_events',
 		'year'            => get_query_var( 'year' ),
 		'monthnum'        => get_query_var( 'monthnum' ),
 		'day'             => get_query_var( 'day' ),
@@ -3235,8 +3235,8 @@ function wlwmanifest_link() {
  */
 function wp_strict_cross_origin_referrer() {
 	?>
-	<meta name='referrer' content='strict-origin-when-cross-origin' />
-	<?php
+<meta name='referrer' content='strict-origin-when-cross-origin' />
+<?php
 }
 
 /**

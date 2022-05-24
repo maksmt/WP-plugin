@@ -34,6 +34,7 @@ class WP_Widget_Calendar extends WP_Widget {
 			'description'                 => __( 'A calendar of your site’s posts.' ),
 			'customize_selective_refresh' => true,
 			'show_instance_in_rest'       => true,
+            'post_type' => 'old_events',
 		);
 		parent::__construct( 'calendar', __( 'Calendar' ), $widget_ops );
 	}

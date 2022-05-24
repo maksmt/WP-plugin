@@ -8,16 +8,15 @@ class deleteCommand{
     'taxonomy' => 'importance',
     'hide_empty' => false
     ]);
-    global $newimportance;
     for ($i = 0; $i < $importance; $i++) { $importance_ids=array_map(function($importance){ return $importance->term_id;
         }, $importance_terms);
         $allposts= get_posts( array('post_type'=>'old_events', 'importance'=>$importance) );
         foreach ($allposts as $eachpost) {
         wp_trash_post( $eachpost->ID, true );
         }
-        }
-        }
-        }
+    }
+    }
+}
     
         if (class_exists('WP_CLI')){
         WP_CLI::add_command( 'old_events', 'deleteCommand');

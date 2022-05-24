@@ -61,6 +61,7 @@ define( 'LOGGED_IN_SALT',    'Dq(V7k` Fx{.U}5+)x#3#:JTqu9OhAlifA}`+n+t[i<@@!BXy?
 define( 'NONCE_SALT',        'M-:,s4/GrlB@:-JUNy3Nob:r/oYrpjh+oz+P3+t>ALVb~1Rh+<IpEe_8wg!O?u3>' );
 define( 'WP_CACHE_KEY_SALT', '%ACnOc)OlM&xe>1T#Ncc& 72|CA@+P}pZuDCRJNFY1v[EI`3a<kl]myP*rFFn(uC' );
 
+define('WP_MEMORY_LIMIT', '256M');
 
 /**#@-*/
 

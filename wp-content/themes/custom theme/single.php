@@ -63,12 +63,9 @@ $args = array(
 
 </div>
 
-<?php
-                    
+<?php 
 }
-wp_reset_postdata();
-?>
-
+wp_reset_postdata(); ?>
 
 <?php get_footer();  
 
